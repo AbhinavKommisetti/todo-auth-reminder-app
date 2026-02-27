@@ -1,0 +1,134 @@
+/* ================= BODY ================= */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+#authSection,
+#todoSection {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ================= INPUTS ================= */
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: white;
+  color: #764ba2;
+}
+
+button:hover {
+  background: #764ba2;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ================= TODO LIST ================= */
+
+ul {
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ================= STATUS BADGES ================= */
+
+span {
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+span[style*="green"] {
+  background: #28a745;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: white !important;
+}
+
+span[style*="orange"] {
+  background: #ff9800;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: white !important;
+}
+
+/* ================= COUNTDOWN ================= */
+
+[id^="countdown-"] {
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffd700;
+}
+
+/* ================= LINKS ================= */
+
+#toggleText span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 400px) {
+  #authSection,
+  #todoSection {
+    width: 90%;
+  }
+}

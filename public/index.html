@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="authSection">
+  <h2 id="formTitle">Login</h2>
+
+  <input id="name" placeholder="Name" style="display:none;">
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+
+  <br><br>
+  <button onclick="handleAuth()">Submit</button>
+
+  <p id="toggleText">
+    Don't have an account?
+    <span onclick="toggleForm()" style="color:blue;cursor:pointer;">
+      Register
+    </span>
+  </p>
+</div>
+
+<div id="todoSection" style="display:none;">
+  <h2>My Todos</h2>
+
+  <input id="todoInput" placeholder="New Todo">
+  <input type="datetime-local" id="dueDate">
+  <input type="datetime-local" id="reminderTime">
+
+  <select id="statusSelect">
+    <option value="In Progress">In Progress</option>
+    <option value="Completed">Completed</option>
+  </select>
+
+  <button onclick="addTodo()">Add</button>
+
+  <hr>
+  <ul id="todoList"></ul>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
